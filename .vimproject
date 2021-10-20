@@ -1,5 +1,12 @@
-ruby=/$PWD filter="*.rb *.rake Rakefile *.rdoc *.R *.sh *.js *.haml *.sass *.txt *.conf" {
+ARGO=/$PWD filter="*.rb *.rake Rakefile *.rdoc *.R *.sh *.js *.haml *.sass *.txt *.conf" {
+ workflow.rb
+ README.md
  bin=bin filter="*"{
+ }
+ doc=doc{
+  README.real.md
+  README.synthetic.md
+  README.synthetic-clonal.md
  }
  lib=lib {
  }
@@ -7,5 +14,30 @@ ruby=/$PWD filter="*.rb *.rake Rakefile *.rdoc *.R *.sh *.js *.haml *.sass *.txt
   test_helper.rb
  }
  data=data filter="*"{
+  evolution=evolution{
+   loh_cnv.yaml
+  }
+ }
+ examples=examples filter="*"{
+  texas_benchmark=texas_benchmark{
+   minimal=minimal{
+    regions_to_slice
+   }
+   minimal_multi_chr=minimal_multi_chr{
+    regions_to_slice
+   }
+   small_crop=small_crop{
+    regions_to_slice
+   }
+   small_slice=small_slice{
+    regions_to_slice
+   }
+   tiny_crop=tiny_crop {
+    regions_to_slice
+   }
+   tiny_slice=tiny_slice{
+    regions_to_slice
+   }
+  }
  }
 }
